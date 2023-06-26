@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>001</title>
+    <style>
+.test{
+    /*前四项是必填项*/
+    overflow: hidden;/*超出部分隐藏*/
+    text-overflow:ellipsis;/* 超出部分显示省略号 */
+    white-space: nowrap;/*规定段落中的文本不进行换行 */
+    width: 200px;/*需要配合宽度来使用，不设宽度，默认100%*/
+    border: 1px solid red;
+}
+    </style>
+</head>
+
+<body>
+<div class="test">
+    <span>文本一行显示，多余内容用省略号表示</span>
+</div>
+</body>
+</html>
