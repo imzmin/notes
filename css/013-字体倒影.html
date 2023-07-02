@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体样式</title>
+  <style>
+    /*-webkit-box-reflect:方向 倒影和本身文字的间距 渐变效果*/
+    /*方向有：above below left right*/
+    /*渐变效果有：none url(使用绝对/相对地址指定遮罩图像) linear-gradient radial-gradient repeat-linear-gradient  repeat-radial-gradient  */
+    /*padding会影响倒影之间的间距*/
+    /*倒影不占空间*/
+
+    /* linea-gradient一个有3个参数：
+    /*1：渐变的方向，top，从上到下，left是从左到右，left top是从左上角到右下角 这个参数可以忽略，默认top；*/
+    /*2和3：起点颜色和重点颜色*!*/
+    /* transparent是rgba(0,0,0,0)的别名*/
+    .reflect{
+      /*padding: 10px;*/
+     -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(142, 97, 157, .8));
+    }
+    /*.reflect{*/
+    /* -webkit-box-reflect: below 10px;*/
+    /*}*/
+  </style>
+</head>
+<body>
+<div class="reflect">
+  字体样式
+</div>
+</body>
+</html>

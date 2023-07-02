@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>resize属性</title>
+  <style>
+    textarea{
+        /*resize属性：通过拖拽文本输入框右下角的图案就可以改变输入框的大小*/
+        /*resize可选参数：none(禁止拖拽) both(可调整宽高) horizontal(调整宽度) vertical(调整高度)*/
+        /*resize属性默认是打开的，如果想关闭可以：1、设置resize：none；2、限制文本框的最大最小宽高，都设置一样大小*/
+        resize: both;
+        min-height: 50px;
+        max-height: 100px;
+        height: 100px;
+        width: 200px;
+        max-width: 200px;
+        min-width: 100px;
+    }
+
+  </style>
+</head>
+<body>
+<textarea>
+    resize属性
+</textarea>
+</body>
+</html>

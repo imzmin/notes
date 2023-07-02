@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>否定伪类</title>
+    <style>
+        div{
+            background-color: #ffa200;
+        }
+        p{
+            background-color: fuchsia;
+        }
+        span{
+            background-color: brown;
+        }
+      /*  排除类名为myp的p元素，给其他p元素设置样式*/
+      p:not(.myp){
+            color:white;
+            background-color: pink;
+        }
+      /*排除span标签，给body内其他标签设置样式，不加body会有一些样式继承，比如字体颜色，字体大小等*/
+      body :not(span){
+          color: white;
+          background-color: #ffa200;
+      }
+    </style>
+</head>
+<body>
+<div>div</div>
+<p>p</p>
+<p>p</p>
+<p class="myp">my-p</p>
+<span>span</span>
+</body>
+</html>

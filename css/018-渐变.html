@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变</title>
+  <style>
+
+    .test{
+        width: 100px;
+        height: 100px;
+
+        /*线性渐变*/
+
+        /*加前缀可以设置方向*/
+        /*方向：top bottom left right 或者角度 例如45deg*/
+        /*background: -webkit-linear-gradient(left,transparent, rgba(142, 97, 157, .8));*/
+
+        /*不加前缀设置不了方向*/
+        /*background: linear-gradient(transparent, rgba(142, 97, 157, .8));*/
+
+        /*放射渐变*/
+        background: radial-gradient(transparent, rgba(142, 97, 157, .8));
+    }
+
+  </style>
+</head>
+<body>
+<div class="test">
+  渐变
+</div>
+</body>
+</html>

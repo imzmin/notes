@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>透明度</title>
+</head>
+<style>
+  /* opacity是针对于所在标签的所有属性，所以box1中的文字和背景颜色透明度都是0.5*/
+  /* alpha只是针对于所在标签的背景颜色属性，所以box2中的文字透明度没变，背景颜色透明度变成了0.5*/
+  .box1{
+    width: 100px;
+    height: 100px;
+    background: rgb(255,220,30);
+    color:red;
+    opacity: 0.5;
+  }
+  .box2{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    color:red;
+    background: rgba(255,220,30,0.5);/*rgba最后一个a代表alpha通道，0-1表示透明度*/
+  }
+</style>
+<body>
+<div class="box1">透明度</div>
+<div class="box2">透明度</div>
+</body>
+<script>
+
+</script>
+</html>

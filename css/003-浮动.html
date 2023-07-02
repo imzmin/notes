@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>浮动</title>
+  <style>
+    /* 1、浮动的元素虽然脱离了标准流，但是里面的内容仍然占据空间，会根据相对位置布局*/
+    /* 2、对块级元素来说，在不设置宽度的情况下，默认宽度100%*，但是设置了浮动之后，宽度就是内容的宽度，不再是100% */
+    /* 3、对于块级元素来说，在不设置高度的情况下，默认父元素的高度由子元素的内容撑开，但是子元素设置了浮动之后，父元素的高度就会变成0，
+    这也是后面为什么要清除浮动的原因*/
+    .box{
+      background-color: cornflowerblue;
+    }
+    .left{
+      float: left;
+      background-color: red;
+    }
+    .right{
+      float: right;
+      background-color: peru;
+    }
+    .box1{
+      background-color: aqua;
+    }
+    .l1{
+      float: left;
+      background-color:rosybrown;
+    }
+    .r1{
+      float: right;
+    background-color: cadetblue;
+    }
+  </style>
+</head>
+<body>
+<div class="left">左浮动</div>
+<div class="box">没有浮动</div>
+<div class="right">右浮动</div>
+<div class="box1">
+  <div class="l1">
+    zuo
+  </div>
+  <div class="r1">
+   you
+  </div>
+</div>
+</body>
+</html>
+

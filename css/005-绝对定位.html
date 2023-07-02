@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        /*绝对定位不占位置*/
+        /*在不设置z-index情况下，绝对定位的元素会覆盖在其他元素之上*/
+        /*只有指定了父元素的position（非static），子元素才能相对于父元素进行绝对定位，否则相对于html进行绝对定位*/
+        .father{
+            position: relative;
+            width: 250px;
+            height: 300px;
+            background-color: cornflowerblue;
+        }
+        .son{
+            position: absolute;
+            top: 0;
+            left: 80px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            z-index: 10;
+        }
+        .son1{
+            width: 200px;
+            height: 200px;
+            background-color: #ffa200;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">
+        绝对定位
+    </div>
+    <div class="son1">
+        没有定位
+    </div>
+</div>
+<div class="box">
+    没有定位
+</div>
+
+</body>
+</html>

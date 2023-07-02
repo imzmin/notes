@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变换</title>
+</head>
+<style>
+  .r,.t,.s,.k{
+    width: 100px;
+    height: 100px;
+    color: white;
+  }
+.r{
+  background-color:darkmagenta ;
+  /*transform: rotateX(60deg);*/
+  /*transform: rotateY(60deg);*/
+  /*transform: rotateZ(30deg);*/
+  transform: rotate3d(1,1,1,60deg);
+}
+.t{
+  background-color:salmon ;
+  /*transform: translateX(100px);*/
+  /*transform: translateY(200px);*/
+  /*transform: translateZ(100px);*/
+  /*transform: translate(100px,200px);*/
+  transform: translate3d(100px,200px,300px);
+}
+.s{
+  background-color:seagreen ;
+  transform: scale(0.6,0.8);
+  /*transform: scale3d(0.6,0.8,0.2);*/
+}
+.k{
+  /*扭曲不支持3D，其他都支持3D*/
+  background-color:darkred;
+  transform: skew(10deg,10deg);
+}
+</style>
+<body>
+<div class="r">
+  旋转
+</div>
+<div class="t">
+  位移
+</div>
+<div class="s">
+  缩放
+</div>
+<div class="k">
+  扭曲
+</div>
+</body>
+</html>

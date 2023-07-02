@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+        /*固定定位不占位置，只会相对浏览器窗口进行定位，不论网页如何滚动，该元素始终停留在屏幕的某个位置*/
+        /*注意：当固定定位元素的父元素有定位时，要给固定定位加z-index，不然层级不够，滚动的时候会被滚动的元素挡住*/
+        /*固定定位最好加上z-index*/
+        .box{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 250px;
+            height: 20px;
+            background-color: cornflowerblue;
+            z-index: 10;
+        }
+        .box1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .son{
+            position: fixed;
+            top: 30px;
+            left: 10px;
+            width: 100px;
+            height: 130px;
+            background-color: pink;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    box
+</div>
+<div class="box1">
+    box1
+    <div class="son">
+        son
+    </div>
+</div>
+<div class="box1">
+    box1
+</div>
+<div class="box1">
+    box1
+</div>
+<div class="box1">
+    box1
+</div>
+<div class="box1">
+    box1
+</div>
+<div class="box1">
+    box1
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            /*infinite:无限循环 alternate：先正向循环再反向循环*/
+           /* 动画参数：名称 动画时间 动画函数 延迟时间 循环次数 反向播放*/
+           animation: boxes 8s linear 2s infinite alternate;
+        }
+        .box:hover{
+            /*经过暂停动画*/
+            animation-play-state: paused;
+        }
+        @keyframes  boxes {
+            /*from to 相当于 0% 100%*/
+            0%{
+                background-color: #ffa200;
+                width: 120px;
+                height: 120px;
+            }
+            25%{
+                background-color: greenyellow;
+                width: 200px;
+                height: 200px;
+            }
+            50%{
+                background-color: crimson;
+                width: 300px;
+                height: 300px;
+            }
+            75%{
+                background-color:cornflowerblue;
+                width: 60px;
+                height: 60px;
+            }
+            100%{
+                background-color: lightcoral;
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    动画
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            /*transition有4个参数：属性 过渡时间 过渡函数(liner匀速  ease逐渐变慢 ease-in加速  ease-out减速 ease-in-out先加速再减速) 延迟吃鸡*/
+            transition: all 3s ease 1s;
+        }
+        .box:hover{
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    过渡要搭配hover使用
+</div>
+</body>
+</html>

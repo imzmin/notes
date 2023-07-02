@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伪元素</title>
+</head>
+<style>
+  /*使用before在元素内前面添加内容，在before中定义的样式均为添加的内容的样式，与元素样式无关*/
+  /*默认伪元素是行内元素*/
+  li:before{
+    content: '<';
+    color:white;
+    background: green;
+    font-size: 12px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+  }
+  /*after在元素后添加内容*/
+  li:after{
+    content: '>';
+    color:white;
+    background: darkorange;
+    font-size: 12px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+  }
+  li:nth-child(2):before{
+    /*content: none; */  /*none 表示什么都没有*/
+    content: '';  /*空 表示没有文字 但还可以设置其他样式*/
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin-top: 5px;
+  }
+  /*双伪元素*/
+  h1::before,h1::after{
+    /*常用来加竖线什么的*/
+    content: '';
+    border: 5px solid red;
+    border-radius: 25px;
+  }
+
+</style>
+<body>
+<ul>
+  <li>伪元素</li>
+  <li>伪元素</li>
+  <li>伪元素</li>
+  <h1>1324324</h1>
+</ul>
+</body>
+</html>

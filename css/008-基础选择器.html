@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础选择器</title>
+</head>
+<style>
+    p{
+        width: 100px;
+        height: 100px;
+        background-color:cornflowerblue;
+    }
+    .box1{
+        width: 100px;
+        height: 100px;
+        background-color: cornflowerblue;
+    }
+    #box2{
+        width: 100px;
+        height: 100px;
+        background-color: darkcyan;
+    }
+    .box3 li>a{
+        color:red
+    }
+    .box4 li>a{
+        color: olivedrab;
+    }
+    .box5{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+    /*相邻选择器用于选择和某个元素相邻的同级元素，例如选择和p元素同级的h1元素*/
+    p+h1{
+      color: red;
+    }
+    .box6{
+        height: 300px;
+        height: 300px;
+        background-color: cadetblue;
+    }
+    /*并集/组选择器表示给多个元素加同样的样式，用逗号隔开*/
+    h1,h2,h3,h4,h5,h6{
+        color: white;
+    }
+    .box7{
+        width: 200px;
+        height: 300px;
+        background-color: aquamarine;
+    }
+    /*交集/复合选择器表示要同时满足两个条件。例如：既要是p元素也要是class="test"这两个条件*/
+    p.test{
+        color: white;
+    }
+    .box8{
+        width: 200px;
+        height: 150px;
+        background-color: darksalmon;
+    }
+    /*选中属性名以btn开头的标签*/
+    div[class^="btn"]{
+        color: white;
+    }
+    /*选择属性名以ipt1结尾的标签*/
+    div[class$="ipt1"]{
+        color: black;
+    }
+    /*选中属性名中有ipt的标签*/
+    div[class*="ipt"]{
+        color: red;
+    }
+</style>
+<body>
+<p>
+  标签选择器
+</p>
+<div class="box1">
+  类选择器
+</div>
+<div id="box2">
+  id选择器
+</div>
+<ul class="box3">
+    <li><a href="#">子代选择器</a></li>
+    <li><a href="#">子代选择器</a></li>
+    <li><a href="#">子代选择器</a></li>
+</ul>
+<ul class="box4">
+    <li><a href="#">后代选择器</a></li>
+    <li><div><a href="#">后代选择器</a></div></li>
+    <li><a href="#">后代选择器</a></li>
+</ul>
+<div class="box5">
+    <p>相邻元素选择器1</p>
+    <h1>相邻元素选择器2</h1>
+</div>
+<div class="box6">
+    <h1>并集/组选择器1</h1>
+    <h2>并集/组选择器2</h2>
+    <h3>并集/组选择器3</h3>
+    <h4>并集/组选择器4</h4>
+    <h5>并集/组选择器5</h5>
+    <h6>并集/组选择器6</h6>
+</div>
+<div class="box7">
+    <p class="test">
+        交集/复合选择器
+    </p>
+    <p>1</p>
+    <div class="test">2</div>
+</div>
+<div class="box8">
+     <div class="btn-ipt1">
+         属性选择器1
+     </div>
+    <div class="btn-ipt2">
+        属性选择器2
+    </div>
+    <div class="btn-ipt3">
+        属性选择器3
+    </div>
+    <div class="btn-ipt4">
+        属性选择器4
+    </div>
+</div>
+</body>
+</html>

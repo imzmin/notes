@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        /*相对定位在不设置top/left/z-index等值的情况下和static表现一样*/
+        /*相对定位和static表现一样，只不过相对定位可以通过设置偏移量和z-index来控制相对于其正常位置进行的偏移*/
+        .box{
+            position: relative;
+            top: 0;
+            left: 20px;
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    box
+</div>
+<div class="box1">
+    box1
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片边框</title>
+  <style>
+    .test{
+        text-align: center;
+        line-height: 100px;
+        width: 200px;
+        height: 200px;
+        border-image-source: url("./image/2.png"); /*图片的路径*/
+        border-image-width: 10px;  /*图片边框的宽度*/
+        border-image-repeat: round; /*图片边框是否平铺(repeat，直接居中重复，可能会被切割成半个)、铺满(round，刚好适应边框宽度)、拉伸(stretch)*/
+        border-image-slice: 25% 30% 15% 20%; /*图片边框四个角的按图片的大小剪裁，没有单位，支持数字和百分比*/
+        border-image-outset:10px; /*图片边框区域超出边框的量*/
+    }
+
+  </style>
+</head>
+<body>
+<div class="test">
+    图片边框
+</div>
+</body>
+</html>

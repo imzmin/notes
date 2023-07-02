@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本多行显示</title>
+    <style>
+        .test {
+            /* 1.设置宽度 */
+            width: 200px;
+            /* 2.设置旧版弹性盒 */
+            display: -webkit-box;
+            /* 3. 控制行数*/
+            -webkit-line-clamp: 3;
+            /* 4. 设置子元素的排列方式  垂直排列*/
+            -webkit-box-orient: vertical;
+            /* 5.溢出隐藏 */
+            overflow: hidden;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+<div class="test">
+    <span>文本多行显示，多余内容用省略号表示文本多行显示，文本多行显示，多余内容用省略号表示</span>
+</div>
+</body>
+</html>

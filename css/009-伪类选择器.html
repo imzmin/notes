@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+</head>
+<style>
+    /*只给第一个p添加样式*/
+    p:first-child{
+        color: brown;
+    }
+    /*只给最后一个p添加样式*/
+    p:last-child{
+        color: fuchsia;
+    }
+    /*父元素只有一个子元素才生效*/
+    P:only-child{
+        background-color: black;
+    }
+    /*选择第2个p元素，如果第2个元素不是p，则没有选中，加不了设置的样式*/
+    p:nth-child(2){
+        background-color: cadetblue;
+    }
+    /*选择从最后一个元素开始计算第n个元素，n也可以是一个表达式*/
+    p:nth-last-child(2){
+        background-color: red;
+    }
+    /*选择第3个p元素，如果第3个元素不是p往后找，直到找到第3个p元素，给它添加设置的样式*/
+    p:nth-of-type(3){
+        background-color: navajowhite;
+    }
+    /*从最后一个元素开始查找，选择第6个p元素，如果第6个元素不是p往后找，直到找到第6个p元素，给它添加设置的样式*/
+    p:nth-last-of-type(6){
+        background-color: darkmagenta;
+    }
+    /*p:first-of-type和p:last-of-type相当于nth-of-type(1)和nth-last-of-type(1)*/
+</style>
+<body>
+<div class="test1">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+</div>
+<div class="test2">
+    <p>1</p>
+    <p>2</p>
+    <h5>3</h5>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+</div>
+</body>
+</html>
