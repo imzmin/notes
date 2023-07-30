@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  #myDiv{
+    width: 200px;
+    height: 300px;
+    background-color: rosybrown;
+    padding: 10px;
+    margin: 20px;
+    border: 5px solid red;
+      overflow-y: scroll;
+  }
+  .box{
+    width:100px;
+    height: 1000px;
+    background-color: blue;
+    margin-left: 20px;
+  }
+</style>
+</head>
+<body>
+<div id="myDiv">
+  <div class="box">1234</div>
+</div>
+<script>
+  let myDiv=document.getElementById('myDiv')
+  let myBox=document.querySelector('.box')
+  let W1=myDiv.clientWidth   //220
+  let H1=myDiv.clientHeight  //320
+
+  let W2=myDiv.offsetHeight  //330
+  let H2=myDiv.offsetWidth  //230
+  let L1=myDiv.offsetLeft  //28
+  let T1=myDiv.offsetTop   //20
+
+  let L2=myBox.offsetLeft   //55
+  let T2=myBox.offsetTop   //35
+
+  let H3=myBox.scrollHeight   //1000
+  let W3=myBox.scrollWidth   //100
+
+  console.log(W1,H1,W2,H2,L1,T1,L2,T2,H3,W3)
+
+  myDiv.onscroll=function () {
+    console.log(myDiv.scrollTop)
+}
+  document.onscroll=function () {
+    console.log(document.documentElement.scrollTop)
+}
+</script>
+</body>
+</html>
