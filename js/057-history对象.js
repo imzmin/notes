@@ -1,0 +1,14 @@
+//history对象表示当前窗口首次使用以来用户的导航历史记录
+//go()可以在用户历史记录中沿任何方向导航，可以前进也可以后退
+//后退1页
+history.go(-1)
+//前进2页
+history.go(2)
+//前进1页
+history.go(-1)
+//后退1页
+history.back()
+//前进1页
+history.forward()
+//导航到最近的页面(最近的位置可能是前进也可能是后退)
+history.go('http://www.baidu.com')
